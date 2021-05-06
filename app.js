@@ -9,8 +9,7 @@ const categoryRoutes = require('./routes/category')
 const orderRoutes = require('./routes/order')
 const positionRoutes = require('./routes/position')
 const app = express()
-const a = ''
-const v = ''
+
 mongoose.connect(kees.mongoURI)
 .then(()=>console.log('mongo connected'))
 .catch(error=>console.log(error))
