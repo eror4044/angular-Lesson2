@@ -1,9 +1,10 @@
 const controller = require('../controllers/order')
 const express = require('express')
 const router = express.Router()
+const passport = require('passport')
 
-router.get('/', controller.getAll)
-router.post('/register', controller.create)
+router.get('/',passport.authenticate('jwt',{session:false}), controller.getAll)
+router.post('/register',passport.authenticate('jwt',{session:false}), controller.create)
 
 
 
